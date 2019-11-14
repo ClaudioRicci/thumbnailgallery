@@ -17,8 +17,8 @@ const Button: React.SFC<ButtonProps> = props => {
 
 Button.defaultProps = {
   buttonType: "button",
-  title: "Launch Gallery",
-  label: "Launch Gallery"
+  title: "Close",
+  label: "Close"
 };
 
 export default pure(Button);
