@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Header from "../Header/Header";
 import Card from "../Card/Card";
 import LoadingCircle from "../LoadingCircle/LoadingCircle";
 import uuid from "uuid";
@@ -42,6 +43,7 @@ function Grid() {
             </main>
           ) : (
             <>
+              <Header title="Thumbnail Gallery" />
               {data.images.map(item => (
                 <Card
                   key={item.id}

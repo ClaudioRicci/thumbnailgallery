@@ -1,0 +1,21 @@
+header {
+  width: 100%;
+  text-align: center;
+  background: #fef200;
+  border-radius: 1em;
+  transition: 0.5s;
+  box-sizing: border-box;
+  margin: 1rem auto 0;
+  h1 {
+    font-size: 2em;
+  }
+  .logo {
+    top: 14px;
+    position: relative;
+    left: -10px;
+  }
+  h1,
+  .logo {
+    display: inline-block;
+  }
+}
