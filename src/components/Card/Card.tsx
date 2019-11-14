@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Modal from "../Modal/Modal";
 import uuid from "uuid";
 import { pure } from "recompose";
+import Button from "../Button/Button";
 import "./Card.scss";
 
 function Card(props) {
@@ -33,6 +34,8 @@ function Card(props) {
           </div>
         </div>
       </div>
+
+      <Button className="button" {...props} />
 
       <button
         className="button moreInfoButton"

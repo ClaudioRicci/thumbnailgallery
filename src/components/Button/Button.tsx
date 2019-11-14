@@ -5,22 +5,20 @@ import { ButtonProps } from "../../interfaces/interfaces";
 
 const Button: React.SFC<ButtonProps> = props => {
   return (
-    <a
+    <button
       data-testid="button"
       className={props.buttonType}
-      href={props.link}
       title={props.title}
     >
       <span>{props.label}</span>
-    </a>
+    </button>
   );
 };
 
 Button.defaultProps = {
   buttonType: "button",
-  link: "link",
-  title: "title",
-  label: "Get Details"
+  title: "Launch Gallery",
+  label: "Launch Gallery"
 };
 
 export default pure(Button);
