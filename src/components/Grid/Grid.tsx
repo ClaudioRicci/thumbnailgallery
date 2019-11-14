@@ -28,34 +28,34 @@ function Grid() {
     fetchData();
   }, [url]);
   return (
-    <>
-      {isError && (
-        <main data-testid="grid">
-          <h1> Whoops! An error occured</h1>
-        </main>
-      )}
-      {isLoading ? (
-        <main data-testid="grid">
-          <LoadingCircle />
-        </main>
-      ) : (
-        <ul>
-          {data.images.map(item => (
+    <main className="grid" data-testid="grid">
+      <div className="centered">
+        <section className="cards">
+          {isError && (
+            <main>
+              <h1> Whoops! An error occured</h1>
+            </main>
+          )}
+          {isLoading ? (
+            <main>
+              <LoadingCircle />
+            </main>
+          ) : (
             <>
-              <li key={item.id}>
-                <a href={item.url}>{item.site}</a>
-              </li>
-              <Card
-                key={item.id}
-                img_url={item.url}
-                copyright={item.copyright}
-                site={item.site}
-              />
+              {data.images.map(item => (
+                <Card
+                  key={item.id}
+                  thumbnail_url={item.url}
+                  large_image_url={item.large_url}
+                  copyright={item.copyright}
+                  site={item.site}
+                />
+              ))}
             </>
-          ))}
-        </ul>
-      )}
-    </>
+          )}
+        </section>
+      </div>
+    </main>
   );
 }
 

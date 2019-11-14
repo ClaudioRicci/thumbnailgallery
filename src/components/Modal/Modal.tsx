@@ -4,12 +4,11 @@ import Card from "../Card/Card";
 import "./Modal.scss";
 
 export default function Modal({
-  make,
-  model,
-  img_url,
-  rrp,
-  carwow_rating,
-  summary,
+  id,
+  url,
+  large_url,
+  copyright,
+  site,
   onClose
 }) {
   function useLockBodyScroll() {
@@ -33,19 +32,11 @@ export default function Modal({
           buttonType="button closeButton"
         />
         <Card
-          make={make}
-          model={model}
-          summary={summary}
-          img_url={img_url}
-          rrp={rrp}
-          carwow_rating={carwow_rating}
-        />
-        <Button
-          link=""
-          title=""
-          label="Get Offers"
-          buttonType="button getOfferButton"
-          onClick={onClose}
+          key={id}
+          thumbnail_url={url}
+          large_image_url={large_url}
+          copyright={copyright}
+          site={site}
         />
       </div>
     </div>
