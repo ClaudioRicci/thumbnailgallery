@@ -31,18 +31,18 @@ function Grid() {
   return (
     <main className="grid" data-testid="grid">
       <div className="centered">
-        <section className="cards">
-          {isError && (
-            <main>
-              <h1> Whoops! An error occured</h1>
-            </main>
-          )}
-          {isLoading ? (
-            <main>
-              <LoadingCircle />
-            </main>
-          ) : (
-            <>
+        {isError && (
+          <main>
+            <h1> Whoops! An error occured</h1>
+          </main>
+        )}
+        {isLoading ? (
+          <main>
+            <LoadingCircle />
+          </main>
+        ) : (
+          <>
+            <section className="cards">
               <Header title="Thumbnail Gallery" />
               {data.images.map(item => (
                 <Card
@@ -53,9 +53,9 @@ function Grid() {
                   site={item.site}
                 />
               ))}
-            </>
-          )}
-        </section>
+            </section>
+          </>
+        )}
       </div>
     </main>
   );

@@ -4,22 +4,29 @@
   text-align: center;
   font-size: 1em;
   transition: 0.5s;
-  padding: 1em 0;
+  padding: 2rem 0 1rem;
   flex: 1 0 290px;
   box-sizing: border-box;
   margin: 1rem 0 0;
 
+  button {
+    height: 48px;
+    width: 160px;
+    display: block;
+    margin: 2rem auto 1rem;
+    padding: 0;
+    background: none;
+  }
+
   img {
     width: 16em;
     height: 10em;
-    display: inline-block;
+    margin-top: -7em;
   }
   svg {
-    background: #faebd7;
     border: 2px #00a4ff solid;
-    margin: 20px auto;
-    position: absolute;
-    margin: 3em;
+    background: #faebd7;
+    position: relative;
     opacity: 0.8;
   }
   svg:hover {
