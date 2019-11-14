@@ -1,0 +1,107 @@
+.card {
+  background: #ee2c2c;
+  border-radius: 1em;
+  text-align: center;
+  font-size: 1em;
+  transition: 0.5s;
+  padding: 1em 0;
+  flex: 1 0 290px;
+  box-sizing: border-box;
+  margin: 1rem 0.25em 0;
+
+  img {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    display: inline-block;
+    height: 102px;
+    vertical-align: middle;
+  }
+}
+
+.card:hover {
+  box-shadow: 3px 3px 8px hsl(0, 0%, 70%);
+  background: #00a4ff;
+  border-radius: 1em;
+  color: #000;
+}
+
+.detailsSurround {
+  .leftSection,
+  .rightSection {
+    width: 100%;
+    margin: 0;
+    padding: 0 0.5em;
+    display: inline-block;
+    text-align: left;
+    position: absolute;
+    left: 0;
+  }
+
+  .leftSectionSurround {
+    height: 0;
+    border-bottom: 120px solid #fff;
+    border-right: 100px solid transparent;
+    z-index: 2;
+
+    .leftSection {
+      color: #000;
+      left: 0;
+    }
+  }
+
+  .rightSectionSurround {
+    border-top: 70px solid #000;
+    border-left: 34px solid transparent;
+    top: -76px;
+    z-index: 3;
+    right: -28.6%;
+    width: 51.6%;
+
+    .rightSection {
+      position: absolute;
+      text-align: right;
+      color: #fff;
+      padding: 0;
+      right: 20px;
+      top: -75px;
+
+      p {
+        line-height: 1.8em;
+      }
+    }
+  }
+
+  .leftSectionSurround,
+  .rightSectionSurround {
+    height: 0;
+    position: relative;
+  }
+  h2 {
+    line-height: 1.2em;
+  }
+  h2,
+  p {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .card {
+    flex: 0 1 calc(50% - 1em);
+    max-width: calc(50% - 1em);
+
+    .mobileSummarySurround p {
+      font-size: 1.2em;
+      line-height: 1.14em;
+    }
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .card {
+    flex: 0 1 calc(16.6% - 1em);
+    max-width: calc(16.6% - 1em);
+    align-self: flex-start;
+  }
+}
