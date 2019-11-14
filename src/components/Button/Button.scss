@@ -46,10 +46,15 @@
   color: #fff;
 }
 
+.zoomButton {
+  background: none;
+}
+
 .closeButton {
   position: absolute;
   right: 2%;
   width: auto;
   z-index: 1;
   top: -50px;
+  background: #00a4ff;
 }

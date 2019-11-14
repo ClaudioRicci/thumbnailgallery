@@ -1,6 +1,6 @@
 import React, { useLayoutEffect } from "react";
 import Button from "../Button/Button";
-import Card from "../Card/Card";
+import Frame from "../Frame/Frame";
 import "./Modal.scss";
 
 export default function Modal({
@@ -31,10 +31,10 @@ export default function Modal({
           onClick={onClose}
           buttonType="button closeButton"
         />
-        <Card
+        <Frame
           key={id}
           thumbnail_url={url}
-          large_image_url={large_url}
+          large_url={large_url}
           copyright={copyright}
           site={site}
         />

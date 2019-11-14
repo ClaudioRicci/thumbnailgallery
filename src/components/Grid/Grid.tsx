@@ -48,7 +48,7 @@ function Grid() {
                 <Card
                   key={item.id}
                   thumbnail_url={item.url}
-                  large_image_url={item.large_url}
+                  large_url={item.large_url}
                   copyright={item.copyright}
                   site={item.site}
                 />

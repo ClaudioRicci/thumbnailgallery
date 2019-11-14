@@ -14,7 +14,7 @@
 .modal-overlay {
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.85);
   display: flex;
   padding: 1em;
   position: fixed;
@@ -28,12 +28,12 @@
 .modal {
   background: #fff;
   border-radius: 1em;
-  padding: 0 1rem 1rem;
+  padding: 1rem;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80%;
+  width: 88%;
   height: auto;
 
   .card {
