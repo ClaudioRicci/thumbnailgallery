@@ -52,4 +52,12 @@ function Card(props) {
   );
 }
 
+Card.defaultProps = {
+  id: 0,
+  thumbnail_url: "thumbnail_url",
+  large_url: "large_url",
+  copyright: "copyright",
+  site: "site"
+};
+
 export default pure(Card);

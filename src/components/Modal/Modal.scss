@@ -81,34 +81,6 @@
       font-size: 1.5em;
       border-bottom: 150px solid #000;
     }
-
-    .moreInfoButton {
-      display: none;
-    }
-
-    .carwowRating {
-      top: 110px;
-      position: absolute;
-      left: 4%;
-    }
-
-    .summary {
-      display: inline-flex;
-      position: absolute;
-      height: 0;
-      border-bottom: 170px solid #fff;
-      border-left: 100px solid transparent;
-      z-index: 1;
-      bottom: 15px;
-      width: fit-content;
-      left: 0;
-      p {
-        line-height: 1.6em;
-        font-size: 1.6em;
-        text-align: left;
-        padding: 0.4em 1em 0 0;
-      }
-    }
   }
 
   .card:hover {

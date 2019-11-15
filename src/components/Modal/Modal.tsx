@@ -1,5 +1,4 @@
 import React, { useLayoutEffect } from "react";
-import Button from "../Button/Button";
 import Frame from "../Frame/Frame";
 import { pure } from "recompose";
 import "./Modal.scss";
@@ -23,11 +22,6 @@ function Modal({ id, url, large_url, copyright, site, onClose }) {
   return (
     <div id="modal-overlay" className="modal-overlay" data-testid="modal">
       <div className="modal">
-        <Button
-          label="Close"
-          onClick={onClose}
-          buttonType="button closeButton"
-        />
         <Frame
           key={id}
           thumbnail_url={url}
@@ -35,7 +29,6 @@ function Modal({ id, url, large_url, copyright, site, onClose }) {
           copyright={copyright}
           site={site}
         />
-
         <button className="button closeButton" onClick={() => shutModal()}>
           <span>Close</span>
         </button>
