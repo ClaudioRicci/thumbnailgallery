@@ -14,7 +14,7 @@ it("Renders without crashing", () => {
 
 test("Renders Grid Correctly", done => {
   const { getByTestId } = render(<Grid />);
-  expect(getByTestId("grid")).toHaveTextContent("Thumbnail Gallery");
+  expect(getByTestId("grid")).toBeInTheDocument();
   done();
 });
 
