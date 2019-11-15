@@ -13,12 +13,12 @@ it("Renders without crashing", () => {
 });
 
 test("Renders Button Correctly", done => {
-  const { getByTestId } = render(<Button label="Get Offer" />);
-  expect(getByTestId("button")).toHaveTextContent("Get Offer");
+  const { getByTestId } = render(<Button label="Close" />);
+  expect(getByTestId("button")).toHaveTextContent("Close");
   done();
 });
 
 it("Matches snapshot", () => {
-  const tree = renderer.create(<Button label="Get Offer"></Button>).toJSON();
+  const tree = renderer.create(<Button label="Close"></Button>).toJSON();
   expect(tree).toMatchSnapshot();
 });

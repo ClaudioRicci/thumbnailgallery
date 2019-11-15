@@ -1,8 +1,25 @@
+### PROJECT FEATURES:
+
+- Componentisation of all Functional Components
+- Typescript interfaces to ensure safety of data types for easy reuse
+- Use of several React Hooks (useEffect, useState, useRef)
+- Separation of Methods (e.g. to fetch data) from rest of code, for easy reuse and testing
+- Device Responsive UI
+- Semantic Markup
+- Unit Tests for all Components
+
+BONUS: - Analyse JS to analyse size of chunked JS, to ensure performance of app is optimal
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm run analyse`
+
+Runs webpack-bundle-analyzer which shows a visual representation of the sizes of the various code bundles. This helps identify areas for performance optimisation.
+Open [http://127.0.0.1:8888/](http://127.0.0.1:8888/) to view it in the browser.
 
 ### `yarn start`
 

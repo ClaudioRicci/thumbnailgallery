@@ -15,7 +15,7 @@ const Header: React.SFC<HeaderProps> = props => {
 };
 
 Header.defaultProps = {
-  title: "Gallery"
+  title: "Thumbnail Gallery"
 };
 
 export default pure(Header);
