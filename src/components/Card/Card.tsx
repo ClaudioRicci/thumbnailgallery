@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Modal from "../Modal/Modal";
 import uuid from "uuid";
 import { pure } from "recompose";
-// import Button from "../Button/Button";
 import "./Card.scss";
 
 function Card(props) {
@@ -10,13 +9,6 @@ function Card(props) {
 
   return (
     <article key={uuid.v4()} className="card" data-testid="card">
-      {/* <button
-        className="button moreInfoButton"
-        onClick={() => setModalOpen(true)}
-      >
-        <span>More Info</span>
-      </button> */}
-
       <button onClick={() => setModalOpen(true)}>
         <svg width="160" height="48" viewBox="0 0 52.966 52.966">
           <path
@@ -55,15 +47,6 @@ function Card(props) {
           </div>
         </div>
       </div>
-
-      {/* <Button className="button" {...props} /> */}
-
-      {/* <button
-        className="button moreInfoButton"
-        onClick={() => setModalOpen(true)}
-      >
-        <span>More Info</span>
-      </button> */}
       {modalOpen && <Modal {...props} onClose={() => setModalOpen(false)} />}
     </article>
   );

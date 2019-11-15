@@ -5,11 +5,7 @@ import { ButtonProps } from "../../interfaces/interfaces";
 
 const Button: React.SFC<ButtonProps> = props => {
   return (
-    <button
-      data-testid="button"
-      className={props.buttonType}
-      title={props.title}
-    >
+    <button data-testid="button" className={props.buttonType}>
       <span>{props.label}</span>
     </button>
   );
@@ -17,7 +13,6 @@ const Button: React.SFC<ButtonProps> = props => {
 
 Button.defaultProps = {
   buttonType: "button",
-  title: "Close",
   label: "Close"
 };
 

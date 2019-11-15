@@ -1,11 +1,8 @@
-// import { getItem } from "../../methods/generalMethods";
-
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Header from "../Header/Header";
 import Card from "../Card/Card";
 import LoadingCircle from "../LoadingCircle/LoadingCircle";
-import uuid from "uuid";
 import { pure } from "recompose";
 import "./Grid.scss";
 
