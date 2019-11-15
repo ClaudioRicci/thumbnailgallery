@@ -14,7 +14,7 @@ it("Renders without crashing", () => {
 
 test("Renders Modal Correctly", done => {
   const { getByTestId } = render(<Modal />);
-  expect(getByTestId("modal")).toHaveTextContent("Get Offers");
+  expect(getByTestId("modal")).toHaveTextContent("Close");
   done();
 });
 

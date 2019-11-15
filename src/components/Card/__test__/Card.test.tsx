@@ -14,7 +14,7 @@ it("Renders without crashing", () => {
 
 test("Renders Card Correctly", done => {
   const { getByTestId } = render(<Card />);
-  expect(getByTestId("card")).toHaveTextContent("Carwow Rating");
+  expect(getByTestId("card")).toHaveTextContent("Image Source");
   done();
 });
 

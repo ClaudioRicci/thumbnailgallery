@@ -18,12 +18,16 @@ p {
 
 h2,
 p {
-  line-height: 0.6em;
+  line-height: 1.6em;
 }
 
 .centered {
   margin: 0 auto;
   padding: 0 1em;
+
+  main {
+    margin: 0 auto;
+  }
 }
 
 .cards {

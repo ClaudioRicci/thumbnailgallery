@@ -1,17 +1,14 @@
 import React, { useLayoutEffect } from "react";
-import Button from "../Button/Button";
-import Card from "../Card/Card";
+import Frame from "../Frame/Frame";
+import { pure } from "recompose";
 import "./Modal.scss";
 
-export default function Modal({
-  make,
-  model,
-  img_url,
-  rrp,
-  carwow_rating,
-  summary,
-  onClose
-}) {
+function Modal({ id, url, large_url, copyright, site, onClose }) {
+  function shutModal() {
+    const modalOverlay = document.getElementById("modal-overlay");
+    modalOverlay.style.display = "none";
+  }
+
   function useLockBodyScroll() {
     useLayoutEffect(() => {
       const originalStyle = window.getComputedStyle(document.body).overflow;
@@ -23,31 +20,21 @@ export default function Modal({
   useLockBodyScroll();
 
   return (
-    <div className="modal-overlay" data-testid="modal">
+    <div id="modal-overlay" className="modal-overlay" data-testid="modal">
       <div className="modal">
-        <Button
-          link=""
-          title=""
-          label="Close"
-          onClick={onClose}
-          buttonType="button closeButton"
+        <Frame
+          key={id}
+          thumbnail_url={url}
+          large_url={large_url}
+          copyright={copyright}
+          site={site}
         />
-        <Card
-          make={make}
-          model={model}
-          summary={summary}
-          img_url={img_url}
-          rrp={rrp}
-          carwow_rating={carwow_rating}
-        />
-        <Button
-          link=""
-          title=""
-          label="Get Offers"
-          buttonType="button getOfferButton"
-          onClick={onClose}
-        />
+        <button className="button closeButton" onClick={() => shutModal()}>
+          <span>Close</span>
+        </button>
       </div>
     </div>
   );
 }
+
+export default pure(Modal);

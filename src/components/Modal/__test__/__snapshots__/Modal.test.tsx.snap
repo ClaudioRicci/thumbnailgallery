@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Matches snapshot 1`] = `
+<div
+  className="modal-overlay"
+  data-testid="modal"
+  id="modal-overlay"
+>
+  <div
+    className="modal"
+  >
+    <article
+      className="frame"
+      data-testid="frame"
+    >
+      <img
+        alt="Image is copyright of undefined, sourced by undefined."
+      />
+    </article>
+    <button
+      className="button closeButton"
+      onClick={[Function]}
+    >
+      <span>
+        Close
+      </span>
+    </button>
+  </div>
+</div>
+`;

@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Matches snapshot 1`] = `
+<article
+  className="frame"
+  data-testid="frame"
+>
+  <img
+    alt="Image is copyright of undefined, sourced by undefined."
+  />
+</article>
+`;

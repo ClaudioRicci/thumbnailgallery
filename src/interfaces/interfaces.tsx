@@ -4,28 +4,14 @@ export interface HeaderProps {
 
 export interface ButtonProps {
   buttonType: string;
-  link: string;
-  title: string;
   label: string;
   onClick: Function;
 }
 
-export interface CarData {
-  isLoading: boolean;
-  cars: [];
-  error: any;
-}
-
-export interface CarProps {
+export interface CardProps {
   id: number;
-  make: string;
-  model: string;
-  img_url: string;
-  rrp: number;
-  carwow_rating: number;
-  label: string;
-  summary: string;
-  buttonType: string;
-  link: string;
-  title: string;
+  thumbnail_url: string;
+  large_url: string;
+  copyright: string;
+  site: string;
 }

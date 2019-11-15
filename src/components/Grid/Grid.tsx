@@ -1,76 +1,61 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import Header from "../Header/Header";
 import Card from "../Card/Card";
 import LoadingCircle from "../LoadingCircle/LoadingCircle";
-import { getItem } from "../../methods/generalMethods";
-import uuid from "uuid";
 import { pure } from "recompose";
 import "./Grid.scss";
 
 function Grid() {
-  const firstUpdate = useRef(false);
-  const [error, setError] = useState(null);
-  const [load, setLoad] = useState(false);
-  const [images, setImages] = useState(null);
-  const allImages = "http://www.splashbase.co/api/v1/images/search?query=cars";
-
-  console.table(allImages);
-
+  const [data, setData] = useState({ images: [] });
+  const [isLoading, setIsLoading] = useState(false);
+  const [isError, setIsError] = useState(false);
+  const url = "http://www.splashbase.co/api/v1/images/search?query=cars";
   useEffect(() => {
-    if (!firstUpdate.current) {
-      getItem(allImages)
-        .then(res => {
-          setImages(res);
-          setLoad(true);
-        })
-        .catch(err => {
-          setError(err);
-          setLoad(true);
-        });
-    }
-    firstUpdate.current = false;
-  }, []);
-
-  if (load) {
-    return (
-      <main className="grid" data-testid="grid">
-        <div className="centered">
-          <section className="cards">
-            {error ? (
-              <h1>{error.message}</h1>
-            ) : (
-              images.map(image => {
-                const {
-                  id,
-                  url,
-                  large_url,
-                  source_id,
-                  copyright,
-                  site
-                } = image;
-                return (
-                  <Card
-                    key={uuid.v4()}
-                    id={id}
-                    url={url}
-                    large_url={large_url}
-                    source_id={source_id}
-                    copyright={copyright}
-                    site={site}
-                  />
-                );
-              })
-            )}
-          </section>
-        </div>
-      </main>
-    );
-  } else {
-    return (
-      <main data-testid="grid">
-        <LoadingCircle />
-      </main>
-    );
-  }
+    const fetchData = async () => {
+      setIsError(false);
+      setIsLoading(true);
+      try {
+        const result = await axios(url);
+        setData(result.data);
+      } catch (error) {
+        setIsError(true);
+      }
+      setIsLoading(false);
+    };
+    fetchData();
+  }, [url]);
+  return (
+    <main className="grid" data-testid="grid">
+      <div className="centered">
+        {isError && (
+          <main>
+            <h1> Whoops! An error occured</h1>
+          </main>
+        )}
+        {isLoading ? (
+          <main>
+            <LoadingCircle />
+          </main>
+        ) : (
+          <>
+            <section className="cards">
+              <Header title="Thumbnail Gallery" />
+              {data.images.map(item => (
+                <Card
+                  key={item.id}
+                  thumbnail_url={item.url}
+                  large_url={item.large_url}
+                  copyright={item.copyright}
+                  site={item.site}
+                />
+              ))}
+            </section>
+          </>
+        )}
+      </div>
+    </main>
+  );
 }
 
 export default pure(Grid);
