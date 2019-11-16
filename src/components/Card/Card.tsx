@@ -4,7 +4,7 @@ import uuid from "uuid";
 import { pure } from "recompose";
 import "./Card.scss";
 
-function Card(props) {
+function Card(props: any) {
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
@@ -37,7 +37,7 @@ function Card(props) {
         <div className="leftSectionSurround">
           <div className="leftSection">
             <h2>Image Source:</h2>
-            <h2>Copyright:</h2>
+            <h3>Copyright:</h3>
           </div>
         </div>
         <div className="rightSectionSurround">
@@ -54,10 +54,11 @@ function Card(props) {
 
 Card.defaultProps = {
   id: 0,
-  thumbnail_url: "thumbnail_url",
-  large_url: "large_url",
-  copyright: "copyright",
-  site: "site"
+  thumbnail_url:
+    "https://splashbase.s3.amazonaws.com/unsplash/regular/tumblr_mrraevBLsP1st5lhmo1_1280.jpg",
+  large_url: "https://splashbase.s3.amazonaws.com/unsplash/large/14ZGHd9",
+  copyright: "CC0",
+  site: "unknown"
 };
 
 export default pure(Card);

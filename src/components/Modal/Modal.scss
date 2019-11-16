@@ -1,3 +1,5 @@
+@import "../../variables.scss";
+
 .images {
   img {
     width: 100%;
@@ -17,7 +19,7 @@
   z-index: 4;
 
   .modal {
-    background: #fff;
+    background: $white;
     border-radius: 1em;
     padding: 1rem;
     position: fixed;
@@ -52,7 +54,7 @@
       .leftSectionSurround {
         left: 43%;
         width: 45%;
-        border-top: 120px solid #fff;
+        border-top: 120px solid $white;
         border-left: 100px solid transparent;
         border-bottom: none;
         border-right: none;
@@ -70,7 +72,7 @@
         width: 28%;
         top: -50px;
         font-size: 1.5em;
-        border-bottom: 150px solid #000;
+        border-bottom: 150px solid $black;
       }
     }
 

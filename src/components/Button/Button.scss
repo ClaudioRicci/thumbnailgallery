@@ -1,13 +1,15 @@
+@import "../../variables.scss";
+
 .button {
+  background: $secondary-color;
   border-radius: 0.4em;
-  background: #0397d8;
-  color: #000;
-  text-align: center;
+  color: $black;
   font-size: 1.4em;
-  padding: 0.5em 2vw;
-  width: 70%;
-  transition: all 0.5s;
   margin: 3vh 0 0;
+  padding: 0.5em 2vw;
+  text-align: center;
+  transition: all 0.5s;
+  width: 70%;
 }
 
 .button span {
@@ -16,10 +18,10 @@
 
 .button span:after {
   content: "\00bb";
-  position: absolute;
   opacity: 0;
-  top: 0;
+  position: absolute;
   right: -20px;
+  top: 0;
 }
 
 .button span,
@@ -43,5 +45,5 @@
 }
 
 .button:hover {
-  color: #fff;
+  color: $white;
 }

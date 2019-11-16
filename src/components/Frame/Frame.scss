@@ -1,8 +1,10 @@
+@import "../../variables.scss";
+
 .card .frame img {
-  width: 100%;
   height: auto;
   margin: 0;
   max-height: 90vh;
+  width: 100%;
 }
 
 // .button {
@@ -63,5 +65,5 @@
   width: auto;
   z-index: 1;
   top: -50px;
-  background: #00a4ff;
+  background: $secondary-color;
 }

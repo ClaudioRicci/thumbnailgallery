@@ -1,6 +1,5 @@
-import React, { useLayoutEffect } from "react";
+import React, { useLayoutEffect, memo } from "react";
 import Frame from "../Frame/Frame";
-import { pure } from "recompose";
 import "./Modal.scss";
 
 const Modal: React.SFC = props => {
@@ -31,4 +30,4 @@ const Modal: React.SFC = props => {
   );
 };
 
-export default pure(Modal);
+export default memo(Modal);

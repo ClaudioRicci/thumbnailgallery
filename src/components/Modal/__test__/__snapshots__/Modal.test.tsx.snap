@@ -14,7 +14,8 @@ exports[`Matches snapshot 1`] = `
       data-testid="frame"
     >
       <img
-        alt="Image is copyright of undefined, sourced by undefined."
+        alt="Image is copyright of copyright, sourced by site."
+        src="large_url"
       />
     </article>
     <button

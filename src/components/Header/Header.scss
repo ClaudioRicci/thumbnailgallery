@@ -1,5 +1,7 @@
+@import "../../variables.scss";
+
 header {
-  background: #fef200;
+  background: $primary-color;
   border-radius: 1rem;
   box-sizing: border-box;
   height: 5.4rem;

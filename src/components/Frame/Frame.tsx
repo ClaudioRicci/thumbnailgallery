@@ -21,4 +21,11 @@ function Frame(props: any) {
   );
 }
 
+Frame.defaultProps = {
+  id: 0,
+  large_url: "https://splashbase.s3.amazonaws.com/unsplash/large/14ZGHd9",
+  copyright: "CCO",
+  site: "unknown"
+};
+
 export default memo(Frame);
