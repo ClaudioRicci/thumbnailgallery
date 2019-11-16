@@ -1,25 +1,26 @@
 .centered-circle {
-  text-align: -webkit-center;
   margin-top: 16vh;
+  text-align: -webkit-center;
 
-  h1 {
-    position: relative;
-    top: 150px;
-    width: 100%;
+  .centered-circle__title {
+    font-size: 1.4rem;
   }
-  .loader {
-    border: 16px solid #f3f3f3;
-    border-top: 16px solid #fef200;
-    border-radius: 50%;
-    width: 180px;
-    height: 180px;
+
+  .centered-circle__title,
+  .centered-circle__logo {
+    position: relative;
+    top: 8.25rem;
+    z-index: 1;
+  }
+
+  .centered-circle__loader {
     animation: spin 2s linear infinite;
     background: #fef200;
-  }
-  .logo {
-    position: relative;
-    top: 132px;
-    z-index: 1;
+    border: 1rem solid #f3f3f3;
+    border-top: 1rem solid #fef200;
+    border-radius: 50%;
+    height: 11rem;
+    width: 11rem;
   }
 }
 

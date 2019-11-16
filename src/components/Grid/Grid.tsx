@@ -39,6 +39,7 @@ function Grid() {
           </main>
         ) : (
           <>
+            <LoadingCircle />
             <section className="cards">
               <Header title="Thumbnail Gallery" />
               {data.images.map(item => (
