@@ -3,9 +3,9 @@ import Frame from "../Frame/Frame";
 import { pure } from "recompose";
 import "./Modal.scss";
 
-function Modal({ id, url, large_url, copyright, site, onClose }) {
+const Modal: React.SFC = props => {
   function shutModal() {
-    const modalOverlay = document.getElementById("modal-overlay");
+    const modalOverlay: any = document.getElementById("modal-overlay");
     modalOverlay.style.display = "none";
   }
 
@@ -22,19 +22,13 @@ function Modal({ id, url, large_url, copyright, site, onClose }) {
   return (
     <div id="modal-overlay" className="modal-overlay" data-testid="modal">
       <div className="modal">
-        <Frame
-          key={id}
-          thumbnail_url={url}
-          large_url={large_url}
-          copyright={copyright}
-          site={site}
-        />
+        <Frame {...props} />
         <button className="button closeButton" onClick={() => shutModal()}>
           <span>Close</span>
         </button>
       </div>
     </div>
   );
-}
+};
 
 export default pure(Modal);

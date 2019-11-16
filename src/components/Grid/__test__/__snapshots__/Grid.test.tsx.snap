@@ -6,7 +6,7 @@ exports[`Matches snapshot 1`] = `
   data-testid="grid"
 >
   <section
-    className="cards"
+    className="grid__cards"
   >
     <header
       data-testid="header"

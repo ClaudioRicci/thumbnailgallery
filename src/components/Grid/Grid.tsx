@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, memo } from "react";
 import axios from "axios";
 import Header from "../Header/Header";
 import Card from "../Card/Card";
 import LoadingCircle from "../LoadingCircle/LoadingCircle";
-import { pure } from "recompose";
 import "./Grid.scss";
 
 function Grid() {
@@ -33,7 +32,7 @@ function Grid() {
       ) : (
         <>
           {!isError && (
-            <section className="cards">
+            <section className="grid__cards">
               <Header title="Thumbnail Gallery" />
               {data.images.map(item => (
                 <Card
@@ -52,4 +51,4 @@ function Grid() {
   );
 }
 
-export default pure(Grid);
+export default memo(Grid);

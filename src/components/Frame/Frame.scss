@@ -5,53 +5,53 @@
   max-height: 90vh;
 }
 
-.button {
-  border-radius: 0.4em;
-  background: #0397d8;
-  color: #000;
-  text-align: center;
-  font-size: 1.4em;
-  padding: 0.5em 2vw;
-  width: 70%;
-  transition: all 0.5s;
-  margin: 3vh 0 0;
-}
+// .button {
+//   border-radius: 0.4em;
+//   background: #0397d8;
+//   color: #000;
+//   text-align: center;
+//   font-size: 1.4em;
+//   padding: 0.5em 2vw;
+//   width: 70%;
+//   transition: all 0.5s;
+//   margin: 3vh 0 0;
+// }
 
-.button span {
-  position: relative;
-}
+// .button span {
+//   position: relative;
+// }
 
-.button span:after {
-  content: "\00bb";
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-}
+// .button span:after {
+//   content: "\00bb";
+//   position: absolute;
+//   opacity: 0;
+//   top: 0;
+//   right: -20px;
+// }
 
-.button span,
-.button span:after {
-  transition: 0.5s;
-}
+// .button span,
+// .button span:after {
+//   transition: 0.5s;
+// }
 
-.button,
-.button span {
-  cursor: pointer;
-  display: inline-block;
-}
+// .button,
+// .button span {
+//   cursor: pointer;
+//   display: inline-block;
+// }
 
-.button:hover span {
-  padding-right: 1em;
-}
+// .button:hover span {
+//   padding-right: 1em;
+// }
 
-.button:hover span:after {
-  opacity: 1;
-  right: 0;
-}
+// .button:hover span:after {
+//   opacity: 1;
+//   right: 0;
+// }
 
-.button:hover {
-  color: #fff;
-}
+// .button:hover {
+//   color: #fff;
+// }
 
 .zoomButton {
   background: none;

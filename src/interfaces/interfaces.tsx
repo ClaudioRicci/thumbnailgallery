@@ -12,8 +12,9 @@ export interface ButtonProps {
   onClick: Function;
 }
 
-export interface CardProps {
+export interface ImageProps {
   id: number;
+  url: string;
   thumbnail_url: string;
   large_url: string;
   copyright: string;
