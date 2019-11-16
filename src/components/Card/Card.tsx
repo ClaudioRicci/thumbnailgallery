@@ -33,7 +33,7 @@ function Card(props: any) {
           "."
         }
       />
-      <div className="detailsSurround">
+      <div className="card__details">
         <div className="leftSectionSurround">
           <div className="leftSection">
             <h2>Image Source:</h2>

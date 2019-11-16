@@ -13,7 +13,7 @@
 
   .modal-overlay__modal {
     background: $white;
-    border-radius: 1em;
+    border-radius: $x-small;
     height: auto;
     left: 50%;
     top: 50%;
@@ -24,6 +24,6 @@
 
 .modal-overlay,
 .modal-overlay__modal {
-  padding: 1rem;
+  padding: $x-small;
   position: fixed;
 }

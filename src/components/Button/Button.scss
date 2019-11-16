@@ -2,31 +2,30 @@
 
 .button {
   background: $secondary-color;
-  border-radius: 0.4em;
+  border-radius: 0.4rem;
   color: $black;
-  font-size: 1.4em;
+  font-size: $x-large;
   margin: 3vh 0 0;
-  padding: 0.5em 2vw;
+  padding: 0.5rem 2vw;
   text-align: center;
   transition: all 0.5s;
   width: 70%;
-}
+  span {
+    position: relative;
+  }
 
-.button span {
-  position: relative;
-}
+  span:after {
+    content: "\00bb";
+    opacity: 0;
+    position: absolute;
+    right: -1.25rem;
+    top: 0;
+  }
 
-.button span:after {
-  content: "\00bb";
-  opacity: 0;
-  position: absolute;
-  right: -20px;
-  top: 0;
-}
-
-.button span,
-.button span:after {
-  transition: 0.5s;
+  span,
+  span:after {
+    transition: 0.5s;
+  }
 }
 
 .button,
@@ -35,15 +34,13 @@
   display: inline-block;
 }
 
-.button:hover span {
-  padding-right: 1em;
-}
-
-.button:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-
 .button:hover {
   color: $white;
+  span {
+    padding-right: $x-small;
+  }
+  :after {
+    opacity: 1;
+    right: 0;
+  }
 }

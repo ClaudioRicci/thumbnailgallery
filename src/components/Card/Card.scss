@@ -2,32 +2,32 @@
 
 .card {
   background: $primary-color;
-  border-radius: 1em;
+  border-radius: $x-small;
   box-sizing: border-box;
-  flex: 1 0 290px;
-  font-size: 1em;
-  margin: 1rem 0 0;
-  padding: 2rem 0 1rem;
+  flex: 1 0 18.125rem;
+  font-size: $x-small;
+  margin: $x-small 0 0;
+  padding: 2rem 0 $x-small;
   text-align: center;
   transition: 0.5s;
 
   button {
     display: block;
-    height: 48px;
-    margin: 2rem auto 1rem;
+    height: 3rem;
+    margin: 2rem auto $x-small;
     padding: 0;
-    width: 160px;
+    width: 10rem;
   }
 
   img {
-    height: 10em;
-    margin-top: -7em;
-    width: 16em;
+    height: 10rem;
+    margin-top: -7rem;
+    width: 16rem;
   }
 
   svg {
     background: $antique-white;
-    border: 2px $secondary-color solid;
+    border: 0.125rem $secondary-color solid;
     opacity: 0.8;
     position: relative;
   }
@@ -38,27 +38,27 @@
 }
 
 .card:hover {
-  background: $primary-color;
-  border-radius: 1em;
-  box-shadow: 3px 3px 8px hsl(0, 0%, 70%);
+  background: $secondary-color;
+  border-radius: $x-small;
+  box-shadow: 0.25rem 0.25rem 0.5rem hsl(0, 0%, 70%);
   color: $black;
 }
 
-.detailsSurround {
+.card__details {
   margin: 0.8rem 0 -4rem;
   .leftSection,
   .rightSection {
     display: inline-block;
     margin: 0;
-    padding: 1em;
+    padding: $x-small;
     position: absolute;
     text-align: left;
     width: 100%;
   }
 
   .leftSectionSurround {
-    border-bottom: 94px solid $white;
-    border-right: 100px solid transparent;
+    border-bottom: 5.875rem solid $white;
+    border-right: 6.25rem solid transparent;
     height: 0;
     z-index: 2;
 
@@ -69,10 +69,10 @@
   }
 
   .rightSectionSurround {
-    border-bottom: 60px solid $black;
-    border-left: 24px solid transparent;
+    border-bottom: 3.75rem solid $black;
+    border-left: 1.5rem solid transparent;
     right: -45.6%;
-    top: -74px;
+    top: -4.875rem;
     width: 46%;
     z-index: 3;
 
@@ -80,11 +80,11 @@
       color: $white;
       padding: 0;
       position: absolute;
-      right: 1rem;
+      right: $x-small;
       text-align: right;
 
       p {
-        line-height: 1.8em;
+        line-height: 1.8rem;
       }
     }
   }
@@ -95,31 +95,25 @@
     position: relative;
   }
   h2 {
-    font-size: 1.2em;
-  }
-  h3 {
-    font-size: 1.1em;
+    font-size: $medium;
+    line-height: 1.6rem;
   }
   p {
-    font-size: 1em;
-  }
-  h2,
-  h3 {
-    line-height: 1.6em;
+    font-size: $x-small;
   }
 }
 
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 40rem) {
   .card {
-    flex: 0 1 calc(50% - 1em);
-    max-width: calc(50% - 1em);
+    flex: 0 1 calc(50% - 1rem);
+    max-width: calc(50% - 1rem);
   }
 }
 
-@media screen and (min-width: 60em) {
+@media screen and (min-width: 60rem) {
   .card {
     align-self: flex-start;
-    flex: 0 1 calc(33.3% - 1em);
-    max-width: calc(33.3% - 1em);
+    flex: 0 1 calc(33.3% - 1rem);
+    max-width: calc(33.3% - 1rem);
   }
 }
