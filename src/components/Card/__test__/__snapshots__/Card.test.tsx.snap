@@ -22,8 +22,8 @@ exports[`Matches snapshot 1`] = `
     </svg>
   </button>
   <img
-    alt="Image is copyright of copyright, sourced by site."
-    src="thumbnail_url"
+    alt="Image is copyright of CC0, sourced by unknown."
+    src="https://splashbase.s3.amazonaws.com/unsplash/regular/tumblr_mrraevBLsP1st5lhmo1_1280.jpg"
   />
   <div
     className="detailsSurround"
@@ -37,9 +37,9 @@ exports[`Matches snapshot 1`] = `
         <h2>
           Image Source:
         </h2>
-        <h2>
+        <h3>
           Copyright:
-        </h2>
+        </h3>
       </div>
     </div>
     <div
@@ -49,10 +49,10 @@ exports[`Matches snapshot 1`] = `
         className="rightSection"
       >
         <p>
-          site
+          unknown
         </p>
         <p>
-          copyright
+          CC0
         </p>
       </div>
     </div>

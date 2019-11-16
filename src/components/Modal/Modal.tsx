@@ -20,7 +20,7 @@ const Modal: React.SFC = props => {
 
   return (
     <div id="modal-overlay" className="modal-overlay" data-testid="modal">
-      <div className="modal">
+      <div className="modal-overlay__modal">
         <Frame {...props} />
         <button className="button closeButton" onClick={() => shutModal()}>
           <span>Close</span>

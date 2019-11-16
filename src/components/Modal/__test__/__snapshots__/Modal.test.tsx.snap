@@ -7,15 +7,15 @@ exports[`Matches snapshot 1`] = `
   id="modal-overlay"
 >
   <div
-    className="modal"
+    className="modal-overlay__modal"
   >
     <article
       className="frame"
       data-testid="frame"
     >
       <img
-        alt="Image is copyright of copyright, sourced by site."
-        src="large_url"
+        alt="Image is copyright of CCO, sourced by unknown."
+        src="https://splashbase.s3.amazonaws.com/unsplash/large/14ZGHd9"
       />
     </article>
     <button
