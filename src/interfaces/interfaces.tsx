@@ -2,6 +2,10 @@ export interface HeaderProps {
   title: string;
 }
 
+export interface LoadingCircleProps {
+  message: string;
+}
+
 export interface ButtonProps {
   buttonType: string;
   label: string;

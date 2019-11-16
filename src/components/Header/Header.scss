@@ -1,13 +1,13 @@
 header {
-  width: 100%;
-  text-align: center;
   background: #fef200;
-  border-radius: 1em;
-  transition: 0.5s;
+  border-radius: 1rem;
   box-sizing: border-box;
-  margin: 1rem auto 0;
   height: 5.4rem;
+  margin: 1rem auto 0;
+  text-align: center;
+  transition: 0.5s;
+  width: 100%;
   h1 {
-    font-size: 1.4em;
+    font-size: 1.4rem;
   }
 }

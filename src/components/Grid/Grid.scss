@@ -1,50 +1,12 @@
-body {
+.grid {
   font-family: "Varela", sans-serif;
-  background: #ccc;
-}
 
-h2 {
-  font-size: 1.2em;
-}
-
-h3 {
-  font-size: 1.1em;
-  line-height: 0;
-}
-
-p {
-  font-size: 1em;
-}
-
-h2,
-p {
-  line-height: 1.6em;
-}
-
-.centered {
-  margin: 0 auto;
-  padding: 0 1em;
-
-  main {
-    margin: 0 auto;
-  }
-}
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-@media screen and (min-width: 40em) {
   .cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-  }
-}
-
-@media screen and (min-width: 52em) {
-  .centered {
+    margin: 0 auto;
     max-width: 70em;
+    padding: 0 1em;
   }
 }

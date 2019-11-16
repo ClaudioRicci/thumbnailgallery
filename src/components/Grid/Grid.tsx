@@ -27,19 +27,12 @@ function Grid() {
   }, [url]);
   return (
     <main className="grid" data-testid="grid">
-      <div className="centered">
-        {isError && (
-          <main>
-            <h1> Whoops! An error occured</h1>
-          </main>
-        )}
-        {isLoading ? (
-          <main>
-            <LoadingCircle />
-          </main>
-        ) : (
-          <>
-            <LoadingCircle />
+      {isError && <LoadingCircle message="Whoops! An error occured" />}
+      {isLoading ? (
+        <LoadingCircle message="Loading..." />
+      ) : (
+        <>
+          {!isError && (
             <section className="cards">
               <Header title="Thumbnail Gallery" />
               {data.images.map(item => (
@@ -52,9 +45,9 @@ function Grid() {
                 />
               ))}
             </section>
-          </>
-        )}
-      </div>
+          )}
+        </>
+      )}
     </main>
   );
 }

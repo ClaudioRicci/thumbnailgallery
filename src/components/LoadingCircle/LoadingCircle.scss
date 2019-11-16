@@ -1,26 +1,26 @@
-.centered-circle {
-  margin-top: 16vh;
+.loading-circle {
+  margin-top: 12vh;
   text-align: -webkit-center;
 
-  .centered-circle__title {
+  .loading-circle__title {
     font-size: 1.4rem;
   }
 
-  .centered-circle__title,
-  .centered-circle__logo {
+  .loading-circle__title,
+  .loading-circle__logo {
     position: relative;
-    top: 8.25rem;
+    top: 12.25rem;
     z-index: 1;
   }
 
-  .centered-circle__loader {
+  .loading-circle__loader {
     animation: spin 2s linear infinite;
     background: #fef200;
     border: 1rem solid #f3f3f3;
     border-top: 1rem solid #fef200;
     border-radius: 50%;
-    height: 11rem;
-    width: 11rem;
+    height: 17rem;
+    width: 17rem;
   }
 }
 
