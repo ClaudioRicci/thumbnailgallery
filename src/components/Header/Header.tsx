@@ -1,7 +1,6 @@
-import React from "react";
+import React, { memo } from "react";
 import "./Header.scss";
 import { HeaderProps } from "../../interfaces/interfaces";
-import { pure } from "recompose";
 
 const Header: React.SFC<HeaderProps> = props => {
   return (
@@ -18,4 +17,4 @@ Header.defaultProps = {
   title: "Thumbnail Gallery"
 };
 
-export default pure(Header);
+export default memo(Header);
