@@ -9,6 +9,7 @@ exports[`Matches snapshot 1`] = `
     onClick={[Function]}
   >
     <svg
+      data-testid="searchIcon"
       height="48"
       viewBox="0 0 52.966 52.966"
       width="160"

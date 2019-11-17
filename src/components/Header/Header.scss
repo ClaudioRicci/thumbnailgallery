@@ -6,10 +6,32 @@ header {
   box-sizing: border-box;
   height: 5.4rem;
   margin: $x-small auto 0;
-  text-align: center;
+  padding-left: 1rem;
+  text-align: left;
   transition: 0.5s;
   width: 100%;
+
   h1 {
     font-size: $x-large;
+  }
+  span {
+    display: inline-grid;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 1.4rem;
+    z-index: 1;
+
+    svg {
+      vertical-align: middle;
+    }
+  }
+}
+
+@media screen and (min-width: 40rem) {
+  header {
+    text-align: center;
   }
 }
