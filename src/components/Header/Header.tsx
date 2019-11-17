@@ -1,6 +1,6 @@
 import React, { memo } from "react";
-import "./Header.scss";
 import { HeaderProps } from "../../interfaces/interfaces";
+import "./Header.scss";
 
 const Header: React.SFC<HeaderProps> = props => {
   return (

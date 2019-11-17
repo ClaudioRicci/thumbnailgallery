@@ -1,8 +1,8 @@
 import React, { useState, useEffect, memo } from "react";
-import axios from "axios";
-import Header from "../Header/Header";
 import Card from "../Card/Card";
+import Header from "../Header/Header";
 import LoadingCircle from "../LoadingCircle/LoadingCircle";
+import axios from "axios";
 import "./Grid.scss";
 
 function Grid() {

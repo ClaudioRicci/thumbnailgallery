@@ -1,14 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, memo } from "react";
 import Modal from "../Modal/Modal";
-import uuid from "uuid";
-import { pure } from "recompose";
 import "./Card.scss";
 
 function Card(props: any) {
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
-    <article key={uuid.v4()} className="card" data-testid="card">
+    <article key={props.id} className="card" data-testid="card">
       <button onClick={() => setModalOpen(true)}>
         <svg width="160" height="48" viewBox="0 0 52.966 52.966">
           <path
@@ -34,14 +32,14 @@ function Card(props: any) {
         }
       />
       <div className="card__details">
-        <div className="leftSectionSurround">
-          <div className="leftSection">
+        <div className="card__details__left__section__surround">
+          <div className="card__details__left__section">
             <h2>Image Source:</h2>
             <h3>Copyright:</h3>
           </div>
         </div>
-        <div className="rightSectionSurround">
-          <div className="rightSection">
+        <div className="card__details__right__section__surround">
+          <div className="card__details__right__section">
             <p>{props.site}</p>
             <p>{props.copyright}</p>
           </div>
@@ -61,4 +59,4 @@ Card.defaultProps = {
   site: "unknown"
 };
 
-export default pure(Card);
+export default memo(Card);

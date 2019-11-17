@@ -26,13 +26,13 @@ exports[`Matches snapshot 1`] = `
     src="https://splashbase.s3.amazonaws.com/unsplash/regular/tumblr_mrraevBLsP1st5lhmo1_1280.jpg"
   />
   <div
-    className="detailsSurround"
+    className="card__details"
   >
     <div
-      className="leftSectionSurround"
+      className="card__details__left__section__surround"
     >
       <div
-        className="leftSection"
+        className="card__details__left__section"
       >
         <h2>
           Image Source:
@@ -43,10 +43,10 @@ exports[`Matches snapshot 1`] = `
       </div>
     </div>
     <div
-      className="rightSectionSurround"
+      className="card__details__right__section__surround"
     >
       <div
-        className="rightSection"
+        className="card__details__right__section"
       >
         <p>
           unknown

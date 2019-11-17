@@ -1,6 +1,6 @@
 import React, { memo } from "react";
-import "./LoadingCircle.scss";
 import { LoadingCircleProps } from "../../interfaces/interfaces";
+import "./LoadingCircle.scss";
 
 const LoadingCircle: React.SFC<LoadingCircleProps> = props => {
   return (

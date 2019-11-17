@@ -35,6 +35,70 @@
   svg:hover {
     background: $primary-color;
   }
+
+  .card__details {
+    margin: 0.8rem 0 -4rem;
+
+    .card__details__left__section__surround {
+      border-bottom: 5.875rem solid $white;
+      border-right: 6.25rem solid transparent;
+      height: 0;
+      z-index: 2;
+
+      .card__details__left__section {
+        color: $black;
+        left: 0;
+        text-align: left;
+
+        h2 {
+          font-size: $medium;
+        }
+        h3 {
+          font-size: $small;
+        }
+        h2,
+        h3 {
+          line-height: 1.6rem;
+        }
+      }
+    }
+
+    .card__details__right__section__surround {
+      border-bottom: 3.75rem solid $black;
+      border-left: 1.5rem solid transparent;
+      right: -45.6%;
+      top: -4.875rem;
+      width: 46%;
+      z-index: 3;
+
+      .card__details__right__section {
+        color: $white;
+        padding: 0;
+        right: $x-small;
+        text-align: right;
+
+        p {
+          font-size: $x-small;
+          line-height: 1.8rem;
+        }
+      }
+    }
+
+    .card__details__left__section__surround,
+    .card__details__right__section__surround {
+      height: 0;
+      position: relative;
+    }
+
+    .card__details__left__section,
+    .card__details__right__section {
+      display: inline-block;
+      margin: 0;
+      padding: $x-small;
+      position: absolute;
+      width: 100%;
+    }
+  }
 }
 
 .card:hover {
@@ -42,65 +106,6 @@
   border-radius: $x-small;
   box-shadow: 0.25rem 0.25rem 0.5rem hsl(0, 0%, 70%);
   color: $black;
-}
-
-.card__details {
-  margin: 0.8rem 0 -4rem;
-  .leftSection,
-  .rightSection {
-    display: inline-block;
-    margin: 0;
-    padding: $x-small;
-    position: absolute;
-    text-align: left;
-    width: 100%;
-  }
-
-  .leftSectionSurround {
-    border-bottom: 5.875rem solid $white;
-    border-right: 6.25rem solid transparent;
-    height: 0;
-    z-index: 2;
-
-    .leftSection {
-      color: $black;
-      left: 0;
-    }
-  }
-
-  .rightSectionSurround {
-    border-bottom: 3.75rem solid $black;
-    border-left: 1.5rem solid transparent;
-    right: -45.6%;
-    top: -4.875rem;
-    width: 46%;
-    z-index: 3;
-
-    .rightSection {
-      color: $white;
-      padding: 0;
-      position: absolute;
-      right: $x-small;
-      text-align: right;
-
-      p {
-        line-height: 1.8rem;
-      }
-    }
-  }
-
-  .leftSectionSurround,
-  .rightSectionSurround {
-    height: 0;
-    position: relative;
-  }
-  h2 {
-    font-size: $medium;
-    line-height: 1.6rem;
-  }
-  p {
-    font-size: $x-small;
-  }
 }
 
 @media screen and (min-width: 40rem) {

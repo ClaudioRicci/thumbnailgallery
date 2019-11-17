@@ -1,7 +1,6 @@
-import React from "react";
-import "./Button.scss";
-import { pure } from "recompose";
+import React, { memo } from "react";
 import { ButtonProps } from "../../interfaces/interfaces";
+import "./Button.scss";
 
 const Button: React.SFC<ButtonProps> = props => {
   return (
@@ -16,4 +15,4 @@ Button.defaultProps = {
   label: "Close"
 };
 
-export default pure(Button);
+export default memo(Button);
