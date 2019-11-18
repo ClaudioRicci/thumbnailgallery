@@ -18,14 +18,18 @@ exports[`Matches snapshot 1`] = `
         src="https://splashbase.s3.amazonaws.com/unsplash/large/14ZGHd9"
       />
     </article>
-    <button
-      className="Close"
-      data-testid="button"
+    <span
+      onClick={[Function]}
     >
-      <span>
-        Close
-      </span>
-    </button>
+      <button
+        className="close"
+        data-testid="button"
+      >
+        <span>
+          Close
+        </span>
+      </button>
+    </span>
   </div>
 </div>
 `;
