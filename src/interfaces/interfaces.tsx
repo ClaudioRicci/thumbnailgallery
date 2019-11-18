@@ -9,7 +9,6 @@ export interface LoadingCircleProps {
 export interface ButtonProps {
   buttonType: string;
   label: string;
-  closeModal: any;
 }
 
 export interface ImageProps {
