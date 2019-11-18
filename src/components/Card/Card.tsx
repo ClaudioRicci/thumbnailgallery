@@ -1,27 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, memo } from "react";
 import Modal from "../Modal/Modal";
-import uuid from "uuid";
-import { pure } from "recompose";
+import SearchIcon from "../SearchIcon/SearchIcon";
 import "./Card.scss";
 
-function Card(props) {
+function Card(props: any) {
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
-    <article key={uuid.v4()} className="card" data-testid="card">
+    <article key={props.id} className="card" data-testid="card">
       <button onClick={() => setModalOpen(true)}>
-        <svg width="160" height="48" viewBox="0 0 52.966 52.966">
-          <path
-            d="M28.983,20h-6v-6c0-0.552-0.448-1-1-1s-1,0.448-1,1v6h-6c-0.552,0-1,0.448-1,1s0.448,1,1,1h6v6c0,0.552,0.448,1,1,1
-		s1-0.448,1-1v-6h6c0.552,0,1-0.448,1-1S29.535,20,28.983,20z"
-          />
-          <path
-            d="M51.704,51.273L36.845,35.82c3.79-3.801,6.138-9.041,6.138-14.82c0-11.58-9.42-21-21-21s-21,9.42-21,21s9.42,21,21,21
-		c5.083,0,9.748-1.817,13.384-4.832l14.895,15.491c0.196,0.205,0.458,0.307,0.721,0.307c0.25,0,0.499-0.093,0.693-0.279
-		C52.074,52.304,52.086,51.671,51.704,51.273z M2.983,21c0-10.477,8.523-19,19-19s19,8.523,19,19s-8.523,19-19,19
-		S2.983,31.477,2.983,21z"
-          />
-        </svg>
+        <SearchIcon />
       </button>
       <img
         src={props.thumbnail_url}
@@ -33,15 +21,15 @@ function Card(props) {
           "."
         }
       />
-      <div className="detailsSurround">
-        <div className="leftSectionSurround">
-          <div className="leftSection">
+      <div className="card__details">
+        <div className="card__details__left__section__surround">
+          <div className="card__details__left__section">
             <h2>Image Source:</h2>
-            <h2>Copyright:</h2>
+            <h3>Copyright:</h3>
           </div>
         </div>
-        <div className="rightSectionSurround">
-          <div className="rightSection">
+        <div className="card__details__right__section__surround">
+          <div className="card__details__right__section">
             <p>{props.site}</p>
             <p>{props.copyright}</p>
           </div>
@@ -54,10 +42,11 @@ function Card(props) {
 
 Card.defaultProps = {
   id: 0,
-  thumbnail_url: "thumbnail_url",
-  large_url: "large_url",
-  copyright: "copyright",
-  site: "site"
+  thumbnail_url:
+    "https://splashbase.s3.amazonaws.com/unsplash/regular/tumblr_mrraevBLsP1st5lhmo1_1280.jpg",
+  large_url: "https://splashbase.s3.amazonaws.com/unsplash/large/14ZGHd9",
+  copyright: "CC0",
+  site: "unknown"
 };
 
-export default pure(Card);
+export default memo(Card);

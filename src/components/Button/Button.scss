@@ -1,0 +1,54 @@
+@import "../../variables.scss";
+
+button {
+  background: $secondary-color;
+  border-radius: 0.4rem;
+  color: $black;
+  font-size: $x-large;
+  margin: 3rem auto 0;
+  padding: 0.5rem 2vw;
+  text-align: center;
+  transition: all 0.5s;
+  width: 16rem;
+  span {
+    position: relative;
+  }
+
+  span:after {
+    content: "\00bb";
+    opacity: 0;
+    position: absolute;
+    right: -1.25rem;
+    top: 0;
+  }
+
+  span,
+  span:after {
+    transition: 0.5s;
+  }
+}
+
+button,
+button span {
+  cursor: pointer;
+  display: inline-block;
+}
+
+button:hover {
+  color: $white;
+  span {
+    padding-right: $x-small;
+  }
+  :after {
+    opacity: 1;
+    right: 0;
+  }
+}
+
+.card button.close {
+  background: $secondary-color;
+  position: absolute;
+  right: 1rem;
+  top: -4.5rem;
+  width: auto;
+}

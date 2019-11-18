@@ -2,14 +2,16 @@
 
 exports[`Matches snapshot 1`] = `
 <div
-  className="centered-circle"
+  className="loading-circle"
   data-testid="loadingCircle"
 >
-  <h1>
+  <h1
+    className="loading-circle__title"
+  >
     Loading...
   </h1>
   <svg
-    className="logo"
+    className="loading-circle__logo"
     height="48"
     viewBox="0 0 160 48"
     width="160"
@@ -19,7 +21,7 @@ exports[`Matches snapshot 1`] = `
     />
   </svg>
   <div
-    className="loader"
+    className="loading-circle__loader"
   />
 </div>
 `;

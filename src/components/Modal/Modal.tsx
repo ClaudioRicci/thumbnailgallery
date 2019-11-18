@@ -1,12 +1,17 @@
-import React, { useLayoutEffect } from "react";
+import React, { useLayoutEffect, memo } from "react";
 import Frame from "../Frame/Frame";
-import { pure } from "recompose";
+import Button from "../Button/Button";
 import "./Modal.scss";
 
-function Modal({ id, url, large_url, copyright, site, onClose }) {
-  function shutModal() {
+function Modal(props: any) {
+  function closeModal() {
     const modalOverlay = document.getElementById("modal-overlay");
     modalOverlay.style.display = "none";
+    if ((document.body.style.overflow = "hidden")) {
+      document.body.style.overflow = "scroll";
+    } else {
+      document.body.style.overflow = "hidden";
+    }
   }
 
   function useLockBodyScroll() {
@@ -21,20 +26,14 @@ function Modal({ id, url, large_url, copyright, site, onClose }) {
 
   return (
     <div id="modal-overlay" className="modal-overlay" data-testid="modal">
-      <div className="modal">
-        <Frame
-          key={id}
-          thumbnail_url={url}
-          large_url={large_url}
-          copyright={copyright}
-          site={site}
-        />
-        <button className="button closeButton" onClick={() => shutModal()}>
-          <span>Close</span>
-        </button>
+      <div className="modal-overlay__modal">
+        <Frame {...props} />
+        <span onClick={() => closeModal()}>
+          <Button {...props} label="Close" buttonType="close" />
+        </span>
       </div>
     </div>
   );
 }
 
-export default pure(Modal);
+export default memo(Modal);

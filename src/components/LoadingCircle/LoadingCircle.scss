@@ -1,25 +1,28 @@
-.centered-circle {
-  text-align: -webkit-center;
-  margin-top: 16vh;
+@import "../../variables.scss";
 
-  h1 {
-    position: relative;
-    top: 150px;
-    width: 100%;
+.loading-circle {
+  margin-top: 12vh;
+  text-align: -webkit-center;
+
+  .loading-circle__title {
+    font-size: $x-large;
   }
-  .loader {
-    border: 16px solid #f3f3f3;
-    border-top: 16px solid #fef200;
-    border-radius: 50%;
-    width: 180px;
-    height: 180px;
-    animation: spin 2s linear infinite;
-    background: #fef200;
-  }
-  .logo {
+
+  .loading-circle__title,
+  .loading-circle__logo {
     position: relative;
-    top: 132px;
+    top: 12.25rem;
     z-index: 1;
+  }
+
+  .loading-circle__loader {
+    animation: spin 2s linear infinite;
+    background: $primary-color;
+    border: $x-small solid $light-grey;
+    border-top: $x-small solid $primary-color;
+    border-radius: 50%;
+    height: 17rem;
+    width: 17rem;
   }
 }
 

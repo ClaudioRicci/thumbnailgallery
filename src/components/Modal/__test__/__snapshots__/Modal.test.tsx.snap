@@ -7,24 +7,29 @@ exports[`Matches snapshot 1`] = `
   id="modal-overlay"
 >
   <div
-    className="modal"
+    className="modal-overlay__modal"
   >
     <article
       className="frame"
       data-testid="frame"
     >
       <img
-        alt="Image is copyright of undefined, sourced by undefined."
+        alt="Image is copyright of CCO, sourced by unknown."
+        src="https://splashbase.s3.amazonaws.com/unsplash/large/14ZGHd9"
       />
     </article>
-    <button
-      className="button closeButton"
+    <span
       onClick={[Function]}
     >
-      <span>
-        Close
-      </span>
-    </button>
+      <button
+        className="close"
+        data-testid="button"
+      >
+        <span>
+          Close
+        </span>
+      </button>
+    </span>
   </div>
 </div>
 `;

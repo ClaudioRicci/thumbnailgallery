@@ -1,50 +1,14 @@
-body {
-  font-family: "Varela", sans-serif;
-  background: #ccc;
-}
+@import "../../variables.scss";
 
-h2 {
-  font-size: 1.2em;
-}
+.grid {
+  font-family: $primary-font;
 
-h3 {
-  font-size: 1.1em;
-  line-height: 0;
-}
-
-p {
-  font-size: 1em;
-}
-
-h2,
-p {
-  line-height: 1.6em;
-}
-
-.centered {
-  margin: 0 auto;
-  padding: 0 1em;
-
-  main {
-    margin: 0 auto;
-  }
-}
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-@media screen and (min-width: 40em) {
-  .cards {
+  .grid__cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-  }
-}
-
-@media screen and (min-width: 52em) {
-  .centered {
-    max-width: 70em;
+    margin: 0 auto;
+    max-width: 70rem;
+    padding: 0 $x-small;
   }
 }
