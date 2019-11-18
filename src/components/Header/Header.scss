@@ -7,6 +7,7 @@ header {
   height: 5.4rem;
   margin: $x-small auto 0;
   padding-left: 1rem;
+  position: relative;
   text-align: left;
   transition: 0.5s;
   width: 100%;
@@ -19,9 +20,9 @@ header {
     font-size: 0.8rem;
     line-height: 1.2rem;
     position: absolute;
-    right: 0;
+    right: -1rem;
     text-align: center;
-    top: 1.4rem;
+    top: 0.3rem;
     z-index: 1;
 
     svg {

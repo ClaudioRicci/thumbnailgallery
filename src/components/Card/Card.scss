@@ -11,17 +11,22 @@
   text-align: center;
   transition: 0.5s;
 
-  button {
-    display: block;
-    height: 3rem;
-    margin: 2rem auto $x-small;
-    padding: 0;
+  article + button {
+    background: #00a4ff;
+    position: absolute;
+    right: -1rem;
+    top: -4rem;
     width: 10rem;
+  }
+
+  button {
+    background: none;
+    border: none;
+    position: absolute;
   }
 
   img {
     height: 10rem;
-    margin-top: -7rem;
     width: 16rem;
   }
 

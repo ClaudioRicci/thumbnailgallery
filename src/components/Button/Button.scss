@@ -1,15 +1,15 @@
 @import "../../variables.scss";
 
-.button {
+button {
   background: $secondary-color;
   border-radius: 0.4rem;
   color: $black;
   font-size: $x-large;
-  margin: 3vh 0 0;
+  margin: 3rem auto 0;
   padding: 0.5rem 2vw;
   text-align: center;
   transition: all 0.5s;
-  width: 70%;
+  width: 16rem;
   span {
     position: relative;
   }
@@ -28,13 +28,13 @@
   }
 }
 
-.button,
-.button span {
+button,
+button span {
   cursor: pointer;
   display: inline-block;
 }
 
-.button:hover {
+button:hover {
   color: $white;
   span {
     padding-right: $x-small;
@@ -43,4 +43,12 @@
     opacity: 1;
     right: 0;
   }
+}
+
+.card button.close {
+  background: $secondary-color;
+  position: absolute;
+  right: 1rem;
+  top: -4.5rem;
+  width: auto;
 }

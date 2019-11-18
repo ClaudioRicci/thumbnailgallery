@@ -19,8 +19,8 @@ exports[`Matches snapshot 1`] = `
       />
     </article>
     <button
-      className="button closeButton"
-      onClick={[Function]}
+      className="Close"
+      data-testid="button"
     >
       <span>
         Close

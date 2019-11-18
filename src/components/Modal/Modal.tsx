@@ -1,11 +1,17 @@
 import React, { useLayoutEffect, memo } from "react";
 import Frame from "../Frame/Frame";
+import Button from "../Button/Button";
 import "./Modal.scss";
 
-const Modal: React.SFC = props => {
-  function shutModal() {
-    const modalOverlay: any = document.getElementById("modal-overlay");
+function Modal(props: any) {
+  function closeModal() {
+    const modalOverlay = document.getElementById("modal-overlay");
     modalOverlay.style.display = "none";
+    if ((document.body.style.overflow = "hidden")) {
+      document.body.style.overflow = "scroll";
+    } else {
+      document.body.style.overflow = "hidden";
+    }
   }
 
   function useLockBodyScroll() {
@@ -22,12 +28,12 @@ const Modal: React.SFC = props => {
     <div id="modal-overlay" className="modal-overlay" data-testid="modal">
       <div className="modal-overlay__modal">
         <Frame {...props} />
-        <button className="button closeButton" onClick={() => shutModal()}>
-          <span>Close</span>
-        </button>
+        <span onClick={() => closeModal()}>
+          <Button {...props} label="Close" buttonType="close" />
+        </span>
       </div>
     </div>
   );
-};
+}
 
 export default memo(Modal);
