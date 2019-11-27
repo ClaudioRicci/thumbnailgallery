@@ -19,8 +19,9 @@ function Grid() {
         setData(result.data);
       } catch (error) {
         setIsError(true);
+      } finally {
+        setIsLoading(false);
       }
-      setIsLoading(false);
     };
     fetchData();
   }, [url]);
