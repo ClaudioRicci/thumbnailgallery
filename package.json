@@ -16,7 +16,7 @@
     "bloomer": "^0.6.5",
     "glob": "^7.1.6",
     "lodash": "^4.17.15",
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "react": "^16.11.0",
     "react-bootstrap": "^1.0.0-beta.14",
     "react-dom": "^16.11.0",
